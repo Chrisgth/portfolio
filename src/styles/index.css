@@ -17,6 +17,13 @@ code {
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  gap: 2rem;
 }
 
 .nav {
@@ -28,6 +35,8 @@ code {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 5%;
   margin: 1rem;
+  animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation-delay: 2s;
 }
 
 .navlist {
@@ -48,3 +57,49 @@ code {
 .navlist > a:hover {
   font-size: larger;
 }
+
+#name {
+  font-size: 4rem;
+  animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+#title {
+  font-size: 3rem;
+  animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation-delay: 1s;
+}
+
+@keyframes scale-in-center {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
