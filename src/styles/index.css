@@ -25,15 +25,26 @@ code {
   flex-direction: column;
   right: 0%;
   padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5%;
+  margin: 1rem;
 }
 
 .navlist {
   display: flex;
   gap: 1rem;
-
+  min-height: 50px;
+  min-width: 200px;
+  justify-content: center;
+  align-items: center;
 }
 
 .navlist > a {
   text-decoration: none;
   color: black;
+  transition: font-size, 0.2s;
+}
+
+.navlist > a:hover {
+  font-size: larger;
 }
