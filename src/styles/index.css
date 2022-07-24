@@ -1,19 +1,24 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 .introduction {
-  background-image: url('../images/bg.jpg');
+  background-image: url("../images/bg.jpg");
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
@@ -35,7 +40,7 @@ code {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 5%;
   margin: 1rem;
-  animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation-delay: 2s;
 }
 
@@ -60,12 +65,12 @@ code {
 
 #name {
   font-size: 4rem;
-  animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 #title {
   font-size: 3rem;
-  animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation-delay: 1s;
 }
 
@@ -85,17 +90,18 @@ code {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #4F5165;
+  background-color: #4f5165;
   color: white;
   padding-bottom: 2rem;
+  padding-top: 2rem;
 }
 
 .icowithtag {
   text-align: center;
-  box-shadow: 0px 0px 8px 5px rgba(255,255,255,0.59);
+  box-shadow: 0px 0px 8px 5px rgba(255, 255, 255, 0.59);
   border-radius: 10px;
   padding: 1rem;
-  border: 4px solid #4F5165;;
+  border: 4px solid #4f5165;
 }
 
 .icowithtag:hover {
@@ -109,9 +115,145 @@ code {
 }
 
 #express {
-  filter: invert(100%) sepia(3%) saturate(10%) hue-rotate(57deg) brightness(105%) contrast(103%);
+  filter: invert(100%) sepia(3%) saturate(10%) hue-rotate(57deg)
+    brightness(105%) contrast(103%);
 }
 
+.projects {
+  background-color: #4f5165;
+  color: white;
+  text-align: center;
+  padding: 0 10% 0 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.project {
+  display: grid;
+  grid-template: 1fr/ 1fr 2fr;
+  padding: 2rem;
+  gap: 1rem;
+  align-items: center;
+  box-shadow: 0px 0px 8px 5px rgba(255, 255, 255, 0.59);
+}
+.content > p {
+  padding: 0 4rem 0 4rem;
+}
+
+.image > img {
+  width: 100%;
+  height: auto;
+  border: 4px solid white;
+  border-radius: 4px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.linkbuttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.linkbuttons > button {
+  background-color: #4f5165;
+  color: white;
+  box-shadow: 0px 0px 8px 5px rgba(255, 255, 255, 0.59);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px 8px 16px;
+  border: 2px solid rgba(255, 255, 255, 0);
+}
+
+.linkbuttons > button:hover {
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.contact {
+  background-color: #4f5165;
+  color: white;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+#cv {
+  background-color: #4f5165;
+  color: white;
+  box-shadow: 0px 0px 8px 5px rgba(255, 255, 255, 0.59);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px 8px 16px;
+  border: 2px solid rgba(255, 255, 255, 0);
+}
+
+#cv:hover {
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+
+.contactLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.contactLinks > img {
+  background-color: white;
+  border-radius: 8px;
+
+  padding: 4px;
+}
+
+.contactLinks > img:hover {
+  box-shadow: 0px 0px 8px 5px rgba(255, 255, 255, 0.59);
+  cursor: pointer;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 2rem;
+  gap: 1rem;
+  box-sizing: border-box;
+  border: 4px solid white;
+  border-radius: 8px;
+}
+.contactForm > * {
+  width: 100%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+.contactForm > button {
+  cursor: pointer;
+  background-color: #4f5165;
+  color: white;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  box-shadow: 0px 0px 8px 5px rgba(255, 255, 255, 0.59);
+}
+
+textarea {
+  min-height: 150px;
+}
+
+.contactForm > button:hover {
+  border: 2px solid white;
+}
 
 @keyframes scale-in-center {
   0% {
@@ -145,5 +287,3 @@ code {
     opacity: 1;
   }
 }
-
-

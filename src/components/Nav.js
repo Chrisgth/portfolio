@@ -1,5 +1,3 @@
-import { useState, useEffect } from "react";
-
 function Nav() {
   const anchorScroll = (e, target) => {
     e.preventDefault();
