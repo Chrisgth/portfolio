@@ -123,7 +123,7 @@ code {
   background-color: #4f5165;
   color: white;
   text-align: center;
-  padding: 0 10% 0 10%;
+  padding: 2rem 10% 0 10%;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -255,6 +255,10 @@ textarea {
   border: 2px solid white;
 }
 
+.skills {
+  padding: 2rem 1rem 0 1rem;
+}
+
 @keyframes scale-in-center {
   0% {
     transform: scale(0);
@@ -287,3 +291,39 @@ textarea {
     opacity: 1;
   }
 }
+
+@media (max-width: 720px) {
+  .project {
+    display: flex;
+    flex-direction: column;
+  }
+  .content > p {
+    padding: 0;
+  }
+  .icowithtag {
+    padding: 0.5rem;
+  }
+  .mernicons {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+  }
+  .contactForm {
+    width: 80%;
+  }
+}
+
+@media (max-width: 560px) {
+  #name {
+    font-size: 32px;
+  }
+  #title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 370px) {
+  .mernicons {
+    grid-template-columns: repeat(1, minmax(150px, 1fr));
+  }
+} ;
