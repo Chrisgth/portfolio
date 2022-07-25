@@ -258,6 +258,10 @@ textarea {
 .skills {
   padding: 2rem 1rem 0 1rem;
 }
+.cv {
+  display: flex;
+  gap: 1rem;
+}
 
 @keyframes scale-in-center {
   0% {
@@ -319,6 +323,9 @@ textarea {
   }
   #title {
     font-size: 24px;
+  }
+  .cv {
+    flex-direction: column;
   }
 }
 

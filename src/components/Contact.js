@@ -30,7 +30,28 @@ function Contact() {
   return (
     <div className="contact" id="contact">
       <h2>Contact me</h2>
-      <button id="cv">Download my CV</button>
+      <div className="cv">
+        <button
+          id="cv"
+          onClick={() =>
+            window.open(
+              process.env.PUBLIC_URL + "/Kristupas_Jusas_CV_english.pdf"
+            )
+          }
+        >
+          CV (English)
+        </button>
+        <button
+          id="cv"
+          onClick={() =>
+            window.open(
+              process.env.PUBLIC_URL + "/Kristupas_Jusas_CV_lietuviu.pdf"
+            )
+          }
+        >
+          CV (Lithuanian)
+        </button>
+      </div>
       <div className="contactLinks">
         <img
           src={LinkedIn}
