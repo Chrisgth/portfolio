@@ -88,7 +88,7 @@ function Projects() {
           <div className="linkbuttons">
             <button
               onClick={() =>
-                window.open("https://protected-harbor-05927.herokuapp.com/")
+                window.open("https://chrisgth-inventory-application.fly.dev/")
               }
             >
               Live
